@@ -1,0 +1,16 @@
+.navi{
+    width: 15em;
+    float: left;
+    background-color: #c0c0c0;
+}
+.article{
+    background-color: gray;
+    margin-bottom: 2em;
+}
+.footer{
+    background-color: #817c7c;
+    margin: -27px 0px 0px 0px;
+}
+#img{
+    align-content: right;
+}
