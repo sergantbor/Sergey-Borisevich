@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+            border: 1px;
+        }
+        a{
+            text-decoration: none;
+            background-color: lightgray;
+            color: black;
+            display: block;
+            border: solid 1px;
+        }
+        li{
+            float: left;
+            position: relative;
+            width: 100px;
+            border: 1px;
+            }
+        li > ul{
+            position: absolute;
+            display: none;
+        }
+        li:hover > ul{           
+            display: block;
+            width: 100px;
+            z-index: 1;
+
+        }
+        li:hover > ul> li{
+            float: none;            
+            color: brown;
+        }
+        @media all and (max-width: 502px){
+            li{
+                float: none;
+            }  
+            li:hover > ul{            
+            display: block;
+            width: 100px;
+            z-index: 1;
+            }       
+            li > ul{
+            position: absolute;
+            left: 100%;
+            top: 0%;
+            display: none;
+            } 
+        } 
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Понедельник</a></li>
+        <li><a href="#">Вторник</a></li>
+        <li><a href="#">Среда</a>
+            <ul>
+                <li><a href="#">Завтрак</a></li>
+                <li><a href="#">Обед</a></li>
+                <li><a href="#">Ужин</a>
+            </ul>
+        </li>
+        <li><a href="#">Четверг</a></li>
+        <li><a href="#">Пятница</a></li>
+    </ul>
+</body>
+</html>
