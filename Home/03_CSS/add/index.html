@@ -31,17 +31,22 @@
         li > ul{
             position: absolute;
             display: none;
+            max-height:0px;
+    overflow:hidden;
+    -webkit-transition:max-height 0.4s linear;
+    -moz-transition:max-height 0.4s linear;
+    transition:max-height 0.4s linear;
         }
         li:hover > ul{           
             display: block;
+            background-color: gray;
             width: 100px;
             z-index: 1;            
+            transition: top 1s ease-out 0.5s;
         }
-        li a:hover{
-            background-color: aqua;
-        }
-        li:hover > ul> li{
-            float: none;                      
+        li:hover > ul> li> a{
+            float: none;           
+            transition: top 1s ease-out 0.5s;
         }
         @media all and (max-width: 502px){
             li{
